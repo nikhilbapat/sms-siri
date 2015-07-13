@@ -35,6 +35,7 @@ def hello_monkey():
 
     # id = data['items'][0]['id']['videoId']
     # video_url = 'https://www.youtube.com/watch?v='+data['items'][0]['id']['videoId']
+    # print "youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --audio-quality 0 -o \"tmp/" + request.values.get('Body', None) + ".%(ext)s\" \"ytsearch:" + request.values.get('Body', None) + "\""
 
     os.system("youtube-dl --extract-audio --prefer-ffmpeg --audio-format mp3 --audio-quality 0 -o \"tmp/" + request.values.get('Body', None) + ".%(ext)s\" \"ytsearch:" + request.values.get('Body', None) + "\"")
     #fileName = id + '.mp3'
